@@ -686,6 +686,18 @@ video {
   width: 33.333333%;
 }
 
+.w-\[30\%\] {
+  width: 30%;
+}
+
+.w-\[33\] {
+  width: 33;
+}
+
+.w-\[33\%\] {
+  width: 33%;
+}
+
 .items-center {
   align-items: center;
 }
