@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../src/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>myBrowserPage</title>
     <style>
         body {
@@ -23,11 +25,23 @@
         }
     </style>
 </head>
-<body class="h-screen flex items-center justify-center">
-    
+<body class="h-screen">
+    <div class="sideBar">
+        <button id="menuButton" class="text-white bg-transparent p-3 rounded-md focus:outline-none fixed top-0 left-0 z-30 text-2xl">
+            <i class="fas fa-bars"></i>
+        </button>
+        <!-- Menu -->
+        <div id="menu" class="hidden fixed top-0 left-0 h-full w-1/5 bg-black text-white shadow-lg z-20 overflow-y-auto pt-12">
+            <a href="#" class="block px-4 py-2 hover:bg-gray-800">Menu 1</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-800">Menu 2</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-800">Menu 3</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-800">Menu 4</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-800">Menu 5</a>
+        </div>
+    </div>
 
 
 
-    <script src="./index.js""></script>
+    <script src="./index.js"></script>
 </body>
 </html>
