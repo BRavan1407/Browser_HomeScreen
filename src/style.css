@@ -806,6 +806,12 @@ video {
   outline-offset: 2px;
 }
 
+@media (min-width: 640px) {
+  .sm\:w-1\/5 {
+    width: 20%;
+  }
+}
+
 @media (min-width: 768px) {
   .md\:w-1\/5 {
     width: 20%;
