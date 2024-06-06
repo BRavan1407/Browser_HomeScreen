@@ -2,7 +2,11 @@
 module.exports = {
   content: ["./dist/*.{html,js}"],
   theme: {
-    extend: {},
+    extend: {
+      colors : {
+        clock : '#252525',
+      }
+    },
   },
   plugins: [],
 }

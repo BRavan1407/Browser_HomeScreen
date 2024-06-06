@@ -33,20 +33,47 @@
             <i class="fas fa-bars"></i>
         </button>
         <!-- Menu -->
-        <div id="menu" class="hidden fixed top-0 left-0 h-full w-[50%] sm:w-1/5 bg-black text-white shadow-lg z-20 overflow-y-auto pt-12">
-            <a href="#" class="block px-4 py-2 hover:bg-gray-800">Menu 1</a>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-800">Menu 2</a>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-800">Menu 3</a>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-800">Menu 4</a>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-800">Menu 5</a>
+        <div id="menu" class="hidden fixed top-0 left-0 h-full w-[50%] sm:w-1/6 bg-black text-white shadow-lg z-20 overflow-y-auto pt-12">
+            <div class="userProfile flex mx-5 my-5 justify-center border-b-2 pb-5">
+                <img src="https://picsum.photos/100/100?random=1" alt="userProfile" class="rounded-full w-[50px] h-[50px]">
+                <a href="#" class="block px-4 py-2 mx-4 h-full items-center py-2"><span class="hover:text-yellow-500 font-bold text-3xl">PruthviRaj</span></a>
+            </div>
+            <a href="#" class="text-center text-lg block px-4 py-2 hover:bg-gray-800">Contact Informations</a>
+            <a href="#" class="text-center text-lg block px-4 py-2 hover:bg-gray-800">Education</a>
+            <a href="#" class="text-center text-lg block px-4 py-2 hover:bg-gray-800">Proffetional Career</a>
+            <a href="#" class="text-center text-lg block px-4 py-2 hover:bg-gray-800">Resume</a>
+            <a href="#" class="text-center text-lg block px-4 py-2 hover:bg-gray-800">To-Do List</a>
+            <a href="#" class="text-center text-lg block px-4 py-2 hover:bg-gray-800">Calender</a>
         </div>
     </div>
 
     <!-- Center Screen -->
-    <div class="centerScreen flex items-center justify-center h-screen">
-        <div class="mainLine">
-            <p class="text-4xl font-bold text-white sm:text-black"><i class="fa-regular fa-clock mr-3"></i>Time Left</p>
+    <div class="centerScreen flex flex-col items-center justify-center h-screen">
+        <div class="mainLine mb-10 ">
+            <p class="text-4xl font-bold text-white sm:text-black"><i class="fa-regular fa-clock mr-3"></i>Time Remaining</p>
+        </div> 
+        <div class="clock">
+            <div class="flex items-center justify-center">
+                <div class="years w-[130px] h-[150px] bg-clock text-white flex items-center justify-center text-8xl font-bold border-2 border-gray-600 shadow-2xl rounded-xl"><span>05</span></div>
+                <span class="semicolon text-9xl h-[150px] text-clock mx-4">:</span>
+                <div class="months w-[130px] h-[150px] bg-clock text-white flex items-center justify-center text-8xl font-bold border-2 border-gray-600 shadow-2xl rounded-xl"><span>10</span></div>
+                <span class="semicolon text-9xl h-[150px] text-clock mx-4">:</span>
+                <div class="days w-[130px] h-[150px] bg-clock text-white flex items-center justify-center text-8xl font-bold border-2 border-gray-600 shadow-2xl rounded-xl"><span>22</span></div>
+                <span class="semicolon text-9xl h-[150px] text-clock mx-4">:</span>
+                <div class="hours w-[130px] h-[150px] bg-clock text-white flex items-center justify-center text-8xl font-bold border-2 border-gray-600 shadow-2xl rounded-xl"><span>18</span></div>
+                <span class="semicolon text-9xl h-[150px] text-clock mx-4">:</span>
+                <div class="minutes w-[130px] h-[150px] bg-clock text-white flex items-center justify-center text-8xl font-bold border-2 border-gray-600 shadow-2xl rounded-xl"><span>43</span></div>
+                <span class="semicolon text-9xl h-[150px] text-clock mx-4">:</span>
+                <div class="seconds w-[130px] h-[150px] bg-clock text-white flex items-center justify-center text-8xl font-bold border-2 border-gray-600 shadow-2xl rounded-xl"><span>55</span></div>
+            </div>
         </div>
+    </div>
+
+    <!-- Right Bar -->
+    <div class="rightBar flex justify-end p-4 top-0 right-0 absolute">
+        <span class="text-2xl text-white font-bold p-3">14th July 1999</span>
+        <span class="text-2xl text-white font-bold p-3">Wednesday</span> <br>
+        <span class="text-2xl text-white font-bold p-3">01:23</span>
     </div>
 
     <script src="./index.js"></script>
