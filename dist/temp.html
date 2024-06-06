@@ -3,23 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Horizontal Line Example</title>
+    <title>Responsive Clock Example</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body class="p-6">
-    <!-- Basic Horizontal Line -->
-    <div class="border-t border-gray-300 my-4"></div>
+<body class="bg-gray-800 h-screen flex items-center justify-center">
+    <div class="clock">
+        <div class="flex flex-wrap md:flex-nowrap items-center justify-center">
+            <div class="years w-[130px] h-[150px] bg-clock text-white flex items-center justify-center text-8xl font-bold border-2 border-gray-600 shadow-2xl rounded-xl"><span>05</span></div>
+            <span class="semicolon text-9xl h-[150px] text-clock mx-4">:</span>
+            <div class="months w-[130px] h-[150px] bg-clock text-white flex items-center justify-center text-8xl font-bold border-2 border-gray-600 shadow-2xl rounded-xl"><span>10</span></div>
+            <span class="semicolon text-9xl h-[150px] text-clock mx-4">:</span>
+            <div class="days w-[130px] h-[150px] bg-clock text-white flex items-center justify-center text-8xl font-bold border-2 border-gray-600 shadow-2xl rounded-xl"><span>22</span></div>
 
-    <!-- Custom Thickness -->
-    <div class="border-t-2 border-gray-300 my-4"></div>
+            <!-- Break between years, months, days and hours, minutes, seconds -->
+            <div class="w-full md:hidden"></div>
 
-    <!-- Custom Color -->
-    <div class="border-t border-red-500 my-4"></div>
-
-    <!-- Custom Width -->
-    <div class="border-t border-gray-300 w-1/2 my-4"></div>
-
-    <!-- Combining All Customizations -->
-    <div class="border-t-4 border-blue-500 w-3/4 my-4"></div>
+            <span class="semicolon text-9xl h-[150px] text-clock mx-4 hidden sm:block">:</span>
+            <div class="hours w-[130px] h-[150px] bg-clock text-white flex items-center justify-center text-8xl font-bold border-2 border-gray-600 shadow-2xl rounded-xl"><span>18</span></div>
+            <span class="semicolon text-9xl h-[150px] text-clock mx-4">:</span>
+            <div class="minutes w-[130px] h-[150px] bg-clock text-white flex items-center justify-center text-8xl font-bold border-2 border-gray-600 shadow-2xl rounded-xl"><span>43</span></div>
+            <span class="semicolon text-9xl h-[150px] text-clock mx-4">:</span>
+            <div class="seconds w-[130px] h-[150px] bg-clock text-white flex items-center justify-center text-8xl font-bold border-2 border-gray-600 shadow-2xl rounded-xl"><span>55</span></div>
+        </div>
+    </div>
 </body>
 </html>
