@@ -7,23 +7,62 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body class="bg-gray-800 h-screen flex items-center justify-center">
-    <div class="clock">
-        <div class="flex flex-wrap md:flex-nowrap items-center justify-center">
-            <div class="years w-[130px] h-[150px] bg-clock text-white flex items-center justify-center text-8xl font-bold border-2 border-gray-600 shadow-2xl rounded-xl"><span>05</span></div>
-            <span class="semicolon text-9xl h-[150px] text-clock mx-4">:</span>
-            <div class="months w-[130px] h-[150px] bg-clock text-white flex items-center justify-center text-8xl font-bold border-2 border-gray-600 shadow-2xl rounded-xl"><span>10</span></div>
-            <span class="semicolon text-9xl h-[150px] text-clock mx-4">:</span>
-            <div class="days w-[130px] h-[150px] bg-clock text-white flex items-center justify-center text-8xl font-bold border-2 border-gray-600 shadow-2xl rounded-xl"><span>22</span></div>
+    <div class="clock flex flex-wrap md:flex-nowrap items-center justify-center">
+        <!-- Years Box with Label -->
+        <div class="flex flex-col items-center">
+            <div class="years w-[130px] h-[150px] bg-clock text-white flex items-center justify-center text-8xl font-bold border-2 border-gray-600 shadow-2xl rounded-xl">
+                <span>05</span>
+            </div>
+            <span class="text-xl font-semibold text-clock">Years</span>
+        </div>
+        <span class="semicolon text-9xl sm:text-clock text-white mx-4">:</span>
 
-            <!-- Break between years, months, days and hours, minutes, seconds -->
-            <div class="w-full md:hidden"></div>
+        <!-- Months Box with Label -->
+        <div class="flex flex-col items-center">
+            <div class="months w-[130px] h-[150px] bg-clock text-white flex items-center justify-center text-8xl font-bold border-2 border-gray-600 shadow-2xl rounded-xl">
+                <span>10</span>
+            </div>
+            <span class="text-xl font-semibold text-clock">Months</span>
+        </div>
+        <span class="semicolon text-9xl sm:text-clock text-white mx-4">:</span>
 
-            <span class="semicolon text-9xl h-[150px] text-clock mx-4 hidden sm:block">:</span>
-            <div class="hours w-[130px] h-[150px] bg-clock text-white flex items-center justify-center text-8xl font-bold border-2 border-gray-600 shadow-2xl rounded-xl"><span>18</span></div>
-            <span class="semicolon text-9xl h-[150px] text-clock mx-4">:</span>
-            <div class="minutes w-[130px] h-[150px] bg-clock text-white flex items-center justify-center text-8xl font-bold border-2 border-gray-600 shadow-2xl rounded-xl"><span>43</span></div>
-            <span class="semicolon text-9xl h-[150px] text-clock mx-4">:</span>
-            <div class="seconds w-[130px] h-[150px] bg-clock text-white flex items-center justify-center text-8xl font-bold border-2 border-gray-600 shadow-2xl rounded-xl"><span>55</span></div>
+        <!-- Days Box with Label -->
+        <div class="flex flex-col items-center">
+            <div class="days w-[130px] h-[150px] bg-clock text-white flex items-center justify-center text-8xl font-bold border-2 border-gray-600 shadow-2xl rounded-xl">
+                <span>22</span>
+            </div>
+            <span class="text-xl font-semibold text-clock">Days</span>
+        </div>
+
+        <!-- Break between years, months, days and hours, minutes, seconds -->
+        <div class="w-full md:hidden"></div>
+
+        <span class="semicolon text-9xl sm:text-clock text-white mx-4">:</span>
+
+        <!-- Hours Box with Label -->
+        <div class="flex flex-col items-center">
+            <div class="hours w-[130px] h-[150px] bg-clock text-white flex items-center justify-center text-8xl font-bold border-2 border-gray-600 shadow-2xl rounded-xl">
+                <span>18</span>
+            </div>
+            <span class="text-xl font-semibold text-clock">Hours</span>
+        </div>
+        <span class="semicolon text-9xl sm:text-clock text-white mx-4">:</span>
+
+        <!-- Minutes Box with Label -->
+        <div class="flex flex-col items-center">
+            <div class="minutes w-[130px] h-[150px] bg-clock text-white flex items-center justify-center text-8xl font-bold border-2 border-gray-600 shadow-2xl rounded-xl">
+                <span>43</span>
+            </div>
+            <span class="text-xl font-semibold text-clock">Minutes</span>
+        </div>
+        <span class="semicolon text-9xl sm:text-clock text-white mx-4">:</span>
+
+        <!-- Seconds Box with Label -->
+        <div class="flex flex-col items-center">
+            <div class="seconds w-[130px] h-[150px] bg-clock text-white flex items-center justify-center text-8xl font-bold border-2 border-gray-600 shadow-2xl rounded-xl">
+                <span>55</span>
+            </div>
+            <span class="text-xl font-semibold text-clock">Seconds</span>
         </div>
     </div>
 </body>
