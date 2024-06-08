@@ -1,3 +1,4 @@
+import  dateZone  from "./clock.js";
 // SideBar Menus
 const menuButton = document.getElementById('menuButton');
 const menu = document.getElementById('menu');
@@ -41,5 +42,11 @@ function countdown(targetDate){
 
 }
 
-const targetDate = new Date('May 30, 2023 23:59:59').getTime();
+const targetDate = new Date('May 30, 2027 23:59:59').getTime();
 const interval = setInterval(() => countdown(targetDate), 1000);
+
+// Right Bar
+const now = new dateZone();
+document.getElementById('date').innerText = now.ddmmmyyyy();
+document.getElementById('weekday').innerText = now.weekDayName();
+document.getElementById('time').innerText = now.hhmm();

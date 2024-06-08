@@ -6,6 +6,7 @@ class dateZone {
         this.day = this.date.getDate().toString().padStart(2, "0");
         this.month = (this.date.getMonth() + 1).toString().padStart(2, "0");
         this.year = this.date.getFullYear();
+        this.weekDay = this.date.getDay();
         this.hours = this.date.getHours().toString().padStart(2, "0");
         this.minutes = this.date.getMinutes().toString().padStart(2, "0");
         this.seconds = this.date.getSeconds().toString().padStart(2, "0");
@@ -65,6 +66,32 @@ class dateZone {
         return `${this.day} ${this.month} ${this.year}`;
     }
 
+    weekDayName() {
+        if(this.weekDay === 1){
+            this.weekDay = 'Monday';
+        }
+        else if (this.weekDay === 2){
+            this.weekDay = 'Tuesday';
+        }
+        else if (this.weekDay === 3){
+            this.weekDay = 'Wednesday';
+        }
+        else if(this.weekDay === 4){
+            this.weekDay = 'Thursday';
+        }
+        else if (this.weekDay === 5){
+            this.weekDay = 'Friday';
+        }
+        else if (this.weekDay === 6){
+            this.weekDay = 'Saturday';
+        }
+        else if (this.weekDay === 7){
+            this.weekDay = 'Sunday';
+        }
+
+        return `${this.weekDay}`;
+    }
+
     ddmmyy() {
         return `${this.day}/${this.month}/${this.year.toString().slice(2)}`
     }
@@ -109,6 +136,7 @@ const today = new dateZone();
 // console.log(today.dd_mm_yy());
 // console.log(today.ddmmyy());
 // console.log(today.ddmmmyyyy());
+console.log(today.weekDayName());
 
 // console.log('------------------------');
 
@@ -124,3 +152,5 @@ const today = new dateZone();
 // const targetDate = new Date("December 31, 2023 23:59:59");
 // console.log(now);
 // console.log(targetDate);
+
+export default dateZone;

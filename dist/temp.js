@@ -29,6 +29,6 @@ function countdown(targetDate) {
 //   targetDate = new Date("December 31, 202 23:59:59").getTime();
 //   const interval = setInterval(() => countdown(targetDate), 1000);
 }
-   const targetDate = new Date("December 31, 202 23:59:59").getTime();
+   const targetDate = new Date("December 31, 2027 23:59:59").getTime();
 
 countdown(targetDate);
