@@ -641,6 +641,14 @@ video {
   height: 100vh;
 }
 
+.h-\[6\%\] {
+  height: 6%;
+}
+
+.h-\[10\%\] {
+  height: 10%;
+}
+
 .w-\[130px\] {
   width: 130px;
 }
@@ -655,6 +663,62 @@ video {
 
 .w-full {
   width: 100%;
+}
+
+.w-\[\] {
+  width: ;
+}
+
+.w-\[5\%\] {
+  width: 5%;
+}
+
+.w-\[8\%\] {
+  width: 8%;
+}
+
+.w-\[20\%\] {
+  width: 20%;
+}
+
+.w-\[80\%\] {
+  width: 80%;
+}
+
+.w-\[0\%\] {
+  width: 0%;
+}
+
+.w-\[100\%\] {
+  width: 100%;
+}
+
+.w-\[120\%\] {
+  width: 120%;
+}
+
+.w-\[130\] {
+  width: 130;
+}
+
+.w-\[130\%\] {
+  width: 130%;
+}
+
+.w-\[10\] {
+  width: 10;
+}
+
+.w-\[1\%0\] {
+  width: 1%0;
+}
+
+.w-\[120\] {
+  width: 120;
+}
+
+.w-\[110\%\] {
+  width: 110%;
 }
 
 .flex-col {
@@ -771,6 +835,10 @@ video {
   line-height: 1;
 }
 
+.text-\[6rem\] {
+  font-size: 6rem;
+}
+
 .text-lg {
   font-size: 1.125rem;
   line-height: 1.75rem;
@@ -779,6 +847,10 @@ video {
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
+}
+
+.text-\[100\%\] {
+  font-size: 100%;
 }
 
 .font-bold {
@@ -797,6 +869,10 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-\[\] {
+  color: ;
 }
 
 .shadow-2xl {

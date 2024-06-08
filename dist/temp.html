@@ -3,105 +3,117 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Countdown Clock</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="../src/style.css" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>myBrowserPage</title>
     <style>
-      /* styles.css */
       body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background: #333;
-        color: #fff;
+        background-image: url("./assets/images/Auli.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
       }
 
-      .countdown {
+      @media (max-width: 768px) {
+        body {
+          background-size: cover;
+          background-image: url("./assets/images/Verticalimage.jpg");
+          background-position: center;
+          background-repeat: no-repeat;
+        }
+      }
+
+      .clock {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        text-align: center;
+        align-items: center;
       }
 
-      .countdown-item {
+      .clock > div {
+        flex: 1 1 130px; /* Adjusts the flex basis to make all boxes equal width */
         margin: 10px;
-        padding: 10px;
-        background: #444;
-        border-radius: 5px;
-        width: 100px;
+        text-align: center; /* Ensures the text inside divs is centered */
       }
 
-      .countdown-item span {
-        display: block;
-        font-size: 2em;
-        margin-bottom: 5px;
+      .semicolon {
+        flex: 0 1 auto; /* Allows the colons to stay in the middle */
+        align-self: center;
+        margin: 10px;
       }
 
-      .label {
-        font-size: 0.8em;
-        color: #ccc;
+      @media (max-width: 768px) {
+        .clock > div {
+          flex: 1 1 calc(33.333% - 20px); /* Adjusts the flex basis for smaller screens to fit 3 in a row */
+        }
+
+        .semicolon {
+          display: none; /* Hide colons on small screens */
+        }
       }
     </style>
   </head>
-  <body>
-    <div class="countdown">
-      <div class="countdown-item">
-        <span id="years"></span>
-        <div class="label">Years</div>
-      </div>
-      <div class="countdown-item">
-        <span id="months"></span>
-        <div class="label">Months</div>
-      </div>
-      <div class="countdown-item">
-        <span id="days"></span>
-        <div class="label">Days</div>
-      </div>
-      <div class="countdown-item">
-        <span id="hours"></span>
-        <div class="label">Hours</div>
-      </div>
-      <div class="countdown-item">
-        <span id="minutes"></span>
-        <div class="label">Minutes</div>
-      </div>
-      <div class="countdown-item">
-        <span id="seconds"></span>
-        <div class="label">Seconds</div>
+  <body class="h-screen">
+    <!-- Side Bar Menu -->
+    <div class="sideBar">
+      <button id="menuButton" class="text-white bg-transparent p-3 rounded-md focus:outline-none fixed top-0 left-0 z-30 text-2xl">
+        <i class="fas fa-bars"></i>
+      </button>
+      <!-- Menu -->
+      <div id="menu" class="hidden fixed top-0 left-0 h-full w-[50%] sm:w-1/6 bg-black text-white shadow-lg z-20 overflow-y-auto pt-12">
+        <div class="userProfile flex mx-5 my-5 justify-center border-b-2 pb-5">
+          <img src="https://picsum.photos/100/100?random=1" alt="userProfile" class="rounded-full w-[50px] h-[50px]" />
+          <a href="#" class="block px-4 py-2 mx-4 h-full items-center py-2"><span class="hover:text-yellow-500 font-bold text-3xl">PruthviRaj</span></a>
+        </div>
+        <a href="#" class="text-center text-lg block px-4 py-2 hover:bg-gray-800">Contact Informations</a>
+        <a href="#" class="text-center text-lg block px-4 py-2 hover:bg-gray-800">Education</a>
+        <a href="#" class="text-center text-lg block px-4 py-2 hover:bg-gray-800">Proffetional Career</a>
+        <a href="#" class="text-center text-lg block px-4 py-2 hover:bg-gray-800">Resume</a>
+        <a href="#" class="text-center text-lg block px-4 py-2 hover:bg-gray-800">To-Do List</a>
+        <a href="#" class="text-center text-lg block px-4 py-2 hover:bg-gray-800">Calender</a>
       </div>
     </div>
-    <script>
-      // script.js
-      function countdown(targetDate) {
-        const now = new Date();
-        const timeDifference = targetDate - now;
 
-        if (timeDifference < 0) {
-          // If the target date is in the past
-          clearInterval(interval);
-          document.querySelector(".countdown").innerHTML = "<h1>Time's up!</h1>";
-          return;
-        }
+    <!-- Center Screen -->
+    <div class="centerScreen flex flex-col items-center justify-center h-screen mt-[250px] sm:mt-0">
+      <div class="mainLine mb-10 ">
+        <p class="text-4xl font-bold text-white sm:text-black"><i class="fa-regular fa-clock mr-3"></i>Clock</p>
+      </div>
+      <div class=" flex flex-wrap sm:flex-nowrap items-center justify-center">
+        <div class="flex flex-col items-center">
+          <div class="w-[130px] h-[150px] bg-clock text-white flex items-center justify-center text-8xl font-bold border-2 border-gray-600 shadow-2xl rounded-xl">
+              <span id="hours"></span>
+          </div>
+          <div class="text-xl font-semibold sm:text-clock text-white p-3">Hours</div>
+      </div>
+      <span class="semicolon text-9xl h-[200px] sm:text-clock text-white mx-4">:</span>
 
-        const years = Math.floor(timeDifference / (1000 * 60 * 60 * 24 * 365));
-        const months = Math.floor((timeDifference % (1000 * 60 * 60 * 24 * 365)) / (1000 * 60 * 60 * 24 * 30));
-        const days = Math.floor((timeDifference % (1000 * 60 * 60 * 24 * 30)) / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+      <div class="flex flex-col items-center">
+          <div class=" w-[130px] h-[150px] bg-clock text-white flex items-center justify-center text-8xl font-bold border-2 border-gray-600 shadow-2xl rounded-xl">
+              <span id="minutes"></span>
+          </div>
+          <div class="text-xl font-semibold sm:text-clock text-white p-3">Minutes</div>
+      </div>
+      <span class="semicolon text-9xl h-[200px] sm:text-clock text-white mx-4">:</span>
+      
+      <div class="flex flex-col items-center">
+          <div class=" w-[130px] h-[150px] bg-clock text-white flex items-center justify-center text-8xl font-bold border-2 border-gray-600 shadow-2xl rounded-xl">
+              <span id="seconds"></span>
+          </div>
+          <div class="text-xl font-semibold sm:text-clock text-white p-3">Seconds</div>
+      </div>
+      </div>
+      
+    </div>
 
-        document.getElementById("years").innerText = (years.toString().padStart(2, "0"));
-        document.getElementById("months").innerText = months;
-        document.getElementById("days").innerText = days;
-        document.getElementById("hours").innerText = hours;
-        document.getElementById("minutes").innerText = minutes;
-        document.getElementById("seconds").innerText = seconds;
-      }
+    <!-- Right Bar -->
+    <div class="rightBar flex flex-col sm:flex-row p-4 top-0 right-0 absolute">
+      <span class="text-2xl text-white font-bold p-3" id="date"></span>
+      <span class="text-2xl text-white font-bold p-3" id="weekday"></span>
+      <span class="text-2xl text-white font-bold p-3"><span id="r.hours"></span>:<span id="r.minutes"></span>:<span id="r.seconds"></span></span>
+    </div>
 
-      const targetDate = new Date("May 30, 2027 23:59:59").getTime();
-      const interval = setInterval(() => countdown(targetDate), 1000);
-    </script>
+    <script src="./index2.js" type="module"></script>
   </body>
 </html>

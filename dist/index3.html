@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../src/style.css" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>myBrowserPage</title>
+    <style>
+      body {
+        background-image: url("./assets/images/Auli.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+
+      @media (max-width: 768px) {
+        body {
+          background-size: cover;
+          background-image: url("./assets/images/Verticalimage.jpg");
+          background-position: center;
+          background-repeat: no-repeat;
+        }
+      }
+    </style>
+  </head>
+  <body class="h-screen">
+    <!-- Side Bar Menu -->
+    <div class="sideBar">
+      <button id="menuButton" class="text-white bg-transparent p-3 rounded-md focus:outline-none fixed top-0 left-0 z-30 text-2xl">
+        <i class="fas fa-bars"></i>
+      </button>
+      <!-- Menu -->
+      <div id="menu" class="hidden fixed top-0 left-0 h-full w-[50%] sm:w-1/6 bg-black text-white shadow-lg z-20 overflow-y-auto pt-12">
+        <div class="userProfile flex mx-5 my-5 justify-center border-b-2 pb-5">
+          <img src="https://picsum.photos/100/100?random=1" alt="userProfile" class="rounded-full w-[50px] h-[50px]" />
+          <a href="#" class="block px-4 py-2 mx-4 h-full items-center py-2"><span class="hover:text-yellow-500 font-bold text-3xl">PruthviRaj</span></a>
+        </div>
+        <a href="#" class="text-center text-lg block px-4 py-2 hover:bg-gray-800">Contact Informations</a>
+        <a href="#" class="text-center text-lg block px-4 py-2 hover:bg-gray-800">Education</a>
+        <a href="#" class="text-center text-lg block px-4 py-2 hover:bg-gray-800">Proffetional Career</a>
+        <a href="#" class="text-center text-lg block px-4 py-2 hover:bg-gray-800">Resume</a>
+        <a href="#" class="text-center text-lg block px-4 py-2 hover:bg-gray-800">To-Do List</a>
+        <a href="#" class="text-center text-lg block px-4 py-2 hover:bg-gray-800">Calender</a>
+      </div>
+    </div>
+
+    <!-- Center Screen -->
+    <div class="centerScreen flex flex-col items-center justify-center h-screen mt-[250px] sm:mt-0">
+      <div class="mainLine mb-10 ">
+        <p class="text-4xl font-bold text-white sm:text-black"><i class="fa-regular fa-clock mr-3"></i>Time Remaining</p>
+      </div>
+      <!-- <div class="clock"> -->
+        <div class="clock flex flex-wrap sm:flex-nowrap items-center justify-center">
+
+                <div class="flex flex-col items-center">
+                    <div class="w-[130px] h-[150px] bg-clock text-white flex items-center justify-center text-8xl font-bold border-2 border-gray-600 shadow-2xl rounded-xl">
+                        <span id="years"></span>
+                    </div>
+                    <span class="text-xl font-semibold sm:text-clock text-white p-3 ">Years</span>
+                </div>
+                <div class="flex items-center">
+                    <span class="semicolon text-9xl h-[200px] sm:text-clock text-white mx-4">:</span>
+                </div>
+            
+            <div class="flex flex-col items-center">
+                <div class="w-[130px] h-[150px] bg-clock text-white flex items-center justify-center text-8xl font-bold border-2 border-gray-600 shadow-2xl rounded-xl">
+                    <span id="months"></span>
+                </div>
+                <span class="text-xl font-semibold sm:text-clock text-white p-3">Months</span>
+            </div>
+            <span class="semicolon text-9xl h-[200px] sm:text-clock text-white mx-4">:</span>
+            
+            <div class="flex flex-col items-center">
+                <div class=" w-[130px] h-[150px] bg-clock text-white flex items-center justify-center text-8xl font-bold border-2 border-gray-600 shadow-2xl rounded-xl">
+                    <span id="days"></span>
+                </div>
+                <div class="text-xl font-semibold sm:text-clock text-white p-3">Days</div>
+            </div>
+
+            <div class="w-full sm:hidden"></div>
+
+            <span class="semicolon text-9xl h-[200px] text-clock mx-4 hidden sm:block">:</span>
+            
+            <div class="flex flex-col items-center">
+                <div class="w-[130px] h-[150px] bg-clock text-white flex items-center justify-center text-8xl font-bold border-2 border-gray-600 shadow-2xl rounded-xl">
+                    <span id="hours"></span>
+                </div>
+                <div class="text-xl font-semibold sm:text-clock text-white p-3">Hours</div>
+            </div>
+            <span class="semicolon text-9xl h-[200px] sm:text-clock text-white mx-4">:</span>
+
+            <div class="flex flex-col items-center">
+                <div class=" w-[130px] h-[150px] bg-clock text-white flex items-center justify-center text-8xl font-bold border-2 border-gray-600 shadow-2xl rounded-xl">
+                    <span id="minutes"></span>
+                </div>
+                <div class="text-xl font-semibold sm:text-clock text-white p-3">Minutes</div>
+            </div>
+            <span class="semicolon text-9xl h-[200px] sm:text-clock text-white mx-4">:</span>
+            
+            <div class="flex flex-col items-center">
+                <div class=" w-[130px] h-[150px] bg-clock text-white flex items-center justify-center text-8xl font-bold border-2 border-gray-600 shadow-2xl rounded-xl">
+                    <span id="seconds"></span>
+                </div>
+                <div class="text-xl font-semibold sm:text-clock text-white p-3">Seconds</div>
+            </div>
+        </div>
+      <!-- </div> -->
+    </div>
+
+    <!-- Right Bar -->
+    <div class="rightBar flex flex-col sm:flex-row p-4 top-0 right-0 absolute">
+      <span class="text-2xl text-white font-bold p-3" id="date"></span>
+      <span class="text-2xl text-white font-bold p-3" id="weekday"></span>
+      <span class="text-2xl text-white font-bold p-3"><span id="r.hours"></span>:<span id="r.minutes"></span>:<span id="r.seconds"></span></span>
+    </div>
+
+    <script src="./index3.js" type="module" ></script>
+    
+  </body>
+</html>
