@@ -41,5 +41,5 @@ function countdown(targetDate){
 
 }
 
-const targetDate = new Date('May 30, 2027 23:59:59').getTime();
+const targetDate = new Date('May 30, 2023 23:59:59').getTime();
 const interval = setInterval(() => countdown(targetDate), 1000);
