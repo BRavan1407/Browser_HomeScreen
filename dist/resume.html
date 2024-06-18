@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../src/style.css" />
+     <!-- Fevicon -->
+     <link rel="icon" type="image/x-icon" href="./assets/images/Fevicon.png">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>myBrowserPage</title>
+    <style>
+     /* Custom CSS for fade-in animation */
+     .fade-in-left {
+        animation: fadeInLeft 0.5s forwards;
+      }
+      @keyframes fadeInLeft {
+        0% {
+          opacity: 0;
+          transform: translateX(-100%);
+        }
+        100% {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+      /* Hide the menu with animation */
+      .fade-out-right {
+        animation: fadeOutRight 0.5s reverse;
+      }
+      @keyframes fadeOutRight {
+        0% {
+          opacity: 1;
+          transform: translateX(-100%);
+        }
+        100% {
+          opacity: 0;
+          transform: translateX(0%);
+        }
+      }
+    </style>
+  </head>
+  <body  class="bg-slate-900 dark:bg-slate-600">
+    <!-- Side Bar Menu -->
+    <div class="sideBar">
+      <button id="menuButton" class="text-white bg-transparent p-3 rounded-md focus:outline-none fixed top-0 left-0 z-30 text-2xl">
+        <i class="fas fa-bars"></i>
+      </button>
+      <!-- Menu -->
+      <div id="menu" class="hidden fixed top-0 left-0 h-full w-[50%] sm:w-1/6 bg-black text-white shadow-lg z-20 overflow-y-auto pt-12">
+        <div class="userProfile flex mx-5 my-5 justify-center border-b-2 pb-5">
+          <img src="https://picsum.photos/100/100?random=1" alt="userProfile" class="rounded-full w-[50px] h-[50px]" />
+          <a href="./index3.html" class="block px-4 py-2 mx-4 h-full items-center py-2"><span class="hover:text-yellow-500 font-bold text-3xl">PruthviRaj</span></a>
+        </div>
+        <a href="./contactInformation.html" class="text-center text-lg block px-4 py-2 hover:bg-gray-800">Contact Informations</a>
+        <a href="./education.html" class="text-center text-lg block px-4 py-2 hover:bg-gray-800">Education</a>
+        <a href="#" class="text-center text-lg block px-4 py-2 hover:bg-gray-800">Proffetional Career</a>
+        <a href="./resume.html" class="text-center text-lg block px-4 py-2 hover:bg-gray-800">Resume</a>
+        <a href="#" class="text-center text-lg block px-4 py-2 hover:bg-gray-800">To-Do List</a>
+        <a href="#" class="text-center text-lg block px-4 py-2 hover:bg-gray-800">Calender</a>
+      </div>
+    </div>
+
+    <!-- Center Screen -->
+    <div class="grid md:grid-cols-12 m-[50px] gap-3">
+        <!-- Left-Container -->
+        <div class="bg-slate-200 dark:bg-slate-900 mobile-menu rounded md:col-span-4 md:block hidden pt-10 overflow-hidden">
+          <!-- Mobile menu button -->
+          <div class="m-3 flex items-center md:hidden">
+            <button class="mobile-menu-back-button">
+              <i class="fa-solid fa-arrow-left text-gray-600 text-3xl"></i>
+            </button>
+          </div>
+  
+          <!-- Profile Picture -->
+          <img src="./assets/images/Profile photo.jpg" alt="Profile Photo" class="rounded-full mx-auto m-3 hover:bg-yellow-500 dark:hover:bg-yellow-500 bg-slate-800 dark:bg-slate-400 h-[350px] w-[350px] shadow-2xl p-2" />
+  
+          <!-- Social Media Links -->
+          <div class="social-media-links mx-9 text-3xl text-center place-content-center">
+            <a href="https://www.facebook.com/pruthu9695" class="text-slate-700 dark:text-slate-400 hover:text-yellow-500 dark:hover:text-yellow-500"><i class="fa-brands fa-facebook m-5"></i></a>
+            <a href="https://www.instagram.com/pruthvirajupadhyay/" class="text-slate-700 dark:text-slate-400 hover:text-yellow-500 dark:hover:text-yellow-500"><i class="fa-brands fa-square-instagram m-5"></i></a>
+            <a href="https://www.linkedin.com/in/pruthviraj-upadhyay-92a42a187/" class="text-slate-700 dark:text-slate-400 hover:text-yellow-500 dark:hover:text-yellow-500"><i class="fa-brands fa-linkedin m-5"></i></a>
+          </div>
+  
+          <!-- Contact Informations -->
+          <div class="contact">
+            <h5 class="p-2 text-2xl font-bold text-slate-700 dark:text-slate-400"><i class="fa-solid fa-address-card text-3xl"></i>&nbspContact</h5>
+            <div class="w-[90%] h-1 border-b-4 border-slate-950 dark:border-slate-100 mt-2 rounded-xl"></div>
+            <div class="text-slate-800 m-7 justify-center">
+              <div class="flex mt-2 text-xl">
+                <i class="fa-solid fa-tty p-2 text-xl text-slate-900 dark:text-slate-200"></i>
+                <p class="text-slate-700 dark:text-slate-200 font-bold">&nbsp <a href="+919904959695">9904959695</a></p>
+              </div>
+              <div class="flex mt-2 text-xl">
+                <i class="fa-solid fa-envelope p-2 text-xl text-slate-900 dark:text-slate-200"></i>
+                <p class="text-slate-700 dark:text-slate-200 font-bold">&nbsp <a href="#">upadhyaypruthviraj131@gmail.com</a></p>
+              </div>
+              <div class="flex mt-2 text-xl">
+                <i class="fa-solid fa-location-dot p-2 text-xl text-slate-900 dark:text-slate-200"></i>
+                <p class="text-slate-700 dark:text-slate-200 font-bold">
+                  &nbsp <a href="https://maps.app.goo.gl/E8ZoQtUWruR2TUfJ8" target="_blank" class="hover:underline">"Bhavani Krupa", Premji Dr. Street, Nr.Gheti Darwaja, Opp. Baharpara pool, Palitana - 364270.</a>
+                </p>
+              </div>
+            </div>
+          </div>
+  
+          <!-- Education Informations -->
+          <div class="educations">
+            <h5 class="p-2 text-2xl font-bold text-slate-700 dark:text-slate-400"><i class="fa-solid fa-school text-3xl"></i>&nbsp Educations</h5>
+            <div class="w-[90%] h-1 border-b-4 border-slate-950 dark:border-slate-100 mt-2 rounded-xl"></div>
+            <div class="text-slate-800 m-7 justify-center">
+              <div class="flex mt-4">
+                <span class="text-xl font-bold text-slate-900 dark:text-slate-400">2010</span>
+                <p class="text-slate-700 dark:text-slate-200">
+                  <span class="font-semibold text-xl">&nbsp <a href="./Images/ssc.jpg" target="_blank" class="hover:underline">SSC</a></span>
+                  <br /><span class="text-slate-500 dark:text-slate-100">&nbsp (GSEB Board - C.M.Vidhyalay, Palitana)</span>
+                </p>
+              </div>
+              <div class="flex mt-4">
+                <span class="text-xl font-bold text-slate-900 dark:text-slate-400">2012</span>
+                <p class="text-slate-700 dark:text-slate-200">
+                  <span class="font-semibold text-xl">&nbsp <a href="./Images/hsc.jpg" target="_blank" class="hover:underline">HSC</a></span> <br /><span class="text-slate-500 dark:text-slate-100">&nbsp (GSEB Board - P.P.Savani Chaitanya Vidhya Sankul, Surat)</span>
+                </p>
+              </div>
+              <div class="flex mt-4">
+                <span class="text-xl font-bold text-slate-900 dark:text-slate-400">2022</span>
+                <p class="text-slate-700 dark:text-slate-200">
+                  <span class="font-semibold text-xl">&nbsp <a href="./Images/be.jpg" target="_blank" class="hover:underline">B.E(Electrical)</a></span> <br /><span class="text-slate-500 dark:text-slate-100">&nbsp (GTU - Takshashila Collage Of Engineering & Technology, Rajkot)</span>
+                </p>
+              </div>
+              <div class="flex mt-4">
+                <span class="text-xl font-bold text-slate-900 dark:text-slate-400">2024</span>
+                <p class="text-slate-700 dark:text-slate-200">
+                  <span class="font-semibold text-xl">&nbsp <a href="#" class="hover:underline" target="_blank" class="hover:underline">MEARN Stack Developement</a></span> <br /><span class="text-slate-500 dark:text-slate-100">&nbsp (Eazy Learn Academy, Bhavnagar)</span>
+                </p>
+              </div>
+            </div>
+          </div>
+  
+          <!-- Experties -->
+          <div class="experties">
+            <h5 class="p-2 text-2xl font-bold text-slate-700 dark:text-slate-400"><i class="fa-solid fa-lightbulb"></i>&nbsp Experties</h5>
+            <div class="w-[90%] h-1 border-b-4 border-slate-950 dark:border-slate-100 mt-2 rounded-xl"></div>
+            <div class="text-slate-800 m-7 justify-center">
+              <ul class="mt-4 list-disc font-semibold text-2xl text-slate-700 dark:text-slate-200 m-4 custom-bullet-color">
+                <li class="mt-3 font-normal">HTML</li>
+                <li class="mt-3 font-normal">CSS</li>
+                <li class="mt-3 font-normal">JavaScript</li>
+                <li class="mt-3 font-normal">Bootstrap</li>
+                <li class="mt-3 font-normal">ReactJS</li>
+                <li class="mt-3 font-normal">NodeJS</li>
+                <li class="mt-3 font-normal">Tailwind</li>
+                <li class="mt-3 font-normal">MongoDB</li>
+                <li class="mt-3 font-normal">MySql</li>
+              </ul>
+            </div>
+          </div>
+  
+          <!-- Languages -->
+          <div class="languages">
+            <h5 class="p-2 text-2xl font-bold text-slate-700 dark:text-slate-400"><i class="fa-solid fa-language"></i>&nbsp Languages</h5>
+            <div class="w-[90%] h-1 border-b-4 border-slate-950 dark:border-slate-100 mt-2 rounded-xl"></div>
+            <div class="text-slate-800 m-7 justify-center">
+              <ul class="mt-4 list-disc font-semibold text-2xl text-slate-700 dark:text-slate-200 m-4 custom-bullet-color">
+                <li class="mt-3 font-normal">Gujarati</li>
+                <li class="mt-3 font-normal">Hindi</li>
+                <li class="mt-3 font-normal">English</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Right-Container -->
+        <div class="bg-slate-100 dark:bg-slate-800 rounded md:col-span-8 text-start pt-10">
+          <div class="flex flex-col">
+            <div class="modeToogle flex justify-between">
+              <!-- Mobile menu button -->
+              <div class="m-3 flex items-center md:hidden">
+                <button class="mobile-menu-button">
+                  <span class="block w-8 h-1 bg-gray-600 mb-1"></span>
+                  <span class="block w-8 h-1 bg-gray-600 mb-1"></span>
+                  <span class="block w-8 h-1 bg-gray-600"></span>
+                </button>
+              </div>
+  
+              <!-- Mode change- Toogle Switch -->
+              <div class="flex items-center m-3">
+                <span class="text-lg font-bold m-3 text-slate-700 dark:text-slate-200">Dark Mode</span>
+                <!-- Hidden checkbox -->
+                <input type="checkbox" id="toggle" class="toggle-checkbox hidden" style="display: none" />
+                <!-- Label that styles the switch -->
+                <label for="toggle" class="toggle-label flex items-center cursor-pointer w-12 h-6 rounded-full relative" style="background-color: #d1d5db">
+                  <!-- Ball inside the switch -->
+                  <span class="toggle-ball absolute w-5 h-5 bg-white rounded-full shadow-md transform transition-transform duration-300" style="top: 0.125rem; left: 0.125rem; transition: transform 0.3s"></span>
+                </label>
+              </div>
+            </div>
+          </div>
+  
+          <!-- Name-Container -->
+          <div class="nameContainer w-[80%] mx-auto flex flex-col items-start justify-center mb-3">
+            <h1 class="text-5xl mt-2 capitalize text-slate-400 dark:text-slate-200 font-bold">
+              <i class="fa-solid fa-user text-slate-700 dark:text-slate-300"></i><span class="capitalize border-spacing-3 p-2 text-slate-600 dark:text-slate-400" style="text-shadow: 6px 5px 8px rgba(0, 0, 0, 0.5)">&nbsp PruthviRaj</span> Upadhyay
+            </h1>
+            <h2 class="text-2xl mt-4 ml-2 text-slate-500 dark:text-slate-300 font-medium">Software Developer</h2>
+            <p class="mt-2 ml-2 text-slate-900 dark:text-slate-200 text-xl">
+              “As a novice web developer, I am passionate about entering the field and focusing on improving my monthly web development experience to create clean and user-friendly websites. With a focus on enhancing my abilities and contributing to the success of innovative web projects, I aim to make a meaningful contribution. I prefer working in a collaborative team environment where I can improve my skills and face new challenges.”
+  
+            </p>
+          </div>
+  
+          <!-- Experience-Container -->
+  
+          <div class="experienceContainer mx-auto flex flex-col items-start justify-center mb-3 w-[80%]">
+            <h2 class="text-4xl font-bold text-slate-600 dark:text-slate-400 mt-8"><i class="fa-solid fa-briefcase text-slate-700 dark:text-slate-300"></i>&nbsp Experience</h2>
+            <div class="w-[100%] h-1 border-b-4 border-slate-950 mt-4 rounded-xl"></div>
+            <div class="text-slate-800 m-4 justify-center ml-8">
+              <ul class="mt-4 list-disc font-semibold text-2xl text-slate-700 m-4 custom-bullet-color">
+                <li class="mt-3 font-normal">
+                  <h6 class="text-2xl mt-3 font-medium text-slate-700 dark:text-slate-300">2024 - Persuing</h6>
+                  <p class="text-3xl font-semibold mt-2 text-slate-500 dark:text-slate-100">Floatbot India pvt. ltd.</p>
+                  <h3 class="text-xl font-medium mt-2 text-slate-700 dark:text-slate-400">Software Developer</h3>
+                  <p class="mt-2 text-slate-900 dark:text-slate-200 text-lg">
+                    Floatbot is a world-leading Voice AI (Conversational AI) platform, which offers end-to-end conversational automation solutions - including Voicebot, omnichannel Chatbot, AI Agent Assist, ASR as a Service, Co-browsing, and Voice Biometrics. We help contact centers, banks, insurers, and FIs increase digital sales, increase CSAT scores, reduce support costs, and boost agent productivity.
+                  </p>
+                  <div class="w-[90%] h-1 border-b-2 border-slate-600 mt-8 rounded-xl justify-center items-center flex flex-col text-center mx-auto"></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+  
+          <!-- Projects-Container -->
+          <div class="ProjectContainer mx-auto flex flex-col items-start justify-center mb-3 w-[80%]">
+            <h2 class="text-4xl font-bold text-slate-600 dark:text-slate-400 mt-8"><i class="fa-solid fa-folder-open text-slate-700 dark:dark:text-slate-300"></i>&nbsp Projects</h2>
+            <div class="w-[100%] h-1 border-b-4 border-slate-950 mt-4 rounded-xl"></div>
+            <div class="text-slate-800 m-4 justify-center ml-8">
+              <ul class="mt-4 list-disc font-semibold text-2xl text-slate-700 m-4 custom-bullet-color">
+                <li class="mt-3 font-normal">
+                  <h6 class="text-2xl mt-3 font-medium text-slate-700 dark:text-slate-300">2023</h6>
+                  <p class="text-3xl font-semibold mt-2 text-slate-500 dark:text-slate-100">Safari Tourism</p>
+                  <h3 class="text-xl font-medium mt-2 text-slate-700 dark:text-slate-400">HTML, CSS & Bootstrap framework</h3>
+                  <p class="text-2xl font-semibold m/t-2 text-yellow-500"><a href="https://bravan1407.github.io/SafariTourism_Bootstrap1/">Visit WebSite</a></p>
+                  <p class="mt-2 text-slate-900 dark:text-slate-200 text-lg">
+                    Incorporating a Bootstrap 5 template, I transformed a tourism company's website with customized HTML and CSS. Seamlessly blending design elements and responsiveness, the project enhances user engagement, showcasing destinations and services with captivating visuals and intuitive navigation, elevating the brand's online presence.
+                  </p>
+                  <div class="w-[90%] h-1 border-b-2 border-slate-600 mt-8 rounded-xl justify-center items-center flex flex-col text-center mx-auto"></div>
+                </li>
+  
+                <li class="mt-3 font-normal">
+                  <h6 class="text-2xl mt-3 font-medium text-slate-700 dark:text-slate-300">2024</h6>
+                  <p class="text-3xl font-semibold mt-2 text-slate-500 dark:text-slate-100">MCRS Hostel</p>
+                  <h3 class="text-xl font-medium mt-2 text-slate-700 dark:text-slate-400">HTML, CSS & Bootstrap framework</h3>
+                  <p class="text-2xl font-semibold mt-2 text-yellow-500"><a href="https://bravan1407.github.io/Hostel/html/index.html">Visit WebSite</a></p>
+                  <p class="mt-2 text-slate-900 dark:text-slate-200 text-lg">
+                    MCRS Hostel, a web project crafted with HTML, CSS, and Bootstrap 5, streamlines student management with intuitive design and efficient functionality. Seamlessly integrating hostel administration, it offers a user-friendly interface for managing accommodations, fostering organization and ease in hostel management tasks.
+                  </p>
+                  <div class="w-[90%] h-1 border-b-2 border-slate-600 mt-8 rounded-xl justify-center items-center flex flex-col text-center mx-auto"></div>
+                </li>
+  
+                <li class="mt-3 font-normal">
+                  <h6 class="text-2xl mt-3 font-medium text-slate-700 dark:text-slate-300">2024</h6>
+                  <p class="text-3xl font-semibold mt-2 text-slate-500 dark:text-slate-100">NGO-Petting</p>
+                  <h3 class="text-xl font-medium mt-2 text-slate-700 dark:text-slate-400">HTML, CSS & Bootstrap framework</h3>
+                  <p class="text-2xl font-semibold mt-2 text-yellow-500"><a href="https://bravan1407.github.io/NGO-Petting/html/index.html">Visit WebSite</a></p>
+                  <p class="mt-2 text-slate-900 dark:text-slate-200 text-lg">
+                    "B Foundation," an ongoing project dedicated to aiding needy dogs through an NGO platform. Built entirely with HTML, CSS, and Bootstrap 5, it provides a seamless user experience, facilitating donations, adoptions, and advocacy efforts to support our furry companions in need.
+                  </p>
+                  <div class="w-[90%] h-1 border-b-2 border-slate-600 mt-8 rounded-xl justify-center items-center flex flex-col text-center mx-auto"></div>
+                </li>
+  
+                <li class="mt-3 font-normal">
+                  <h6 class="text-2xl mt-3 font-medium text-slate-700 dark:text-slate-300">2024</h6>
+                  <p class="text-3xl font-semibold mt-2 text-slate-500 dark:text-slate-100">Resume With Dark Mode</p>
+                  <h3 class="text-xl font-medium mt-2 text-slate-700 dark:text-slate-400">HTML, CSS & TailwindCss</h3>
+                  <p class="text-2xl font-semibold mt-2 text-yellow-500"><a href="https://bravan1407.github.io/NGO-Petting/html/index.html">Visit WebSite</a></p>
+                  <p class="mt-2 text-slate-900 dark:text-slate-200 text-lg">
+                    My resume webpage, crafted with HTML, CSS, and Tailwind CSS, offers a sleek design with dark mode and responsive layout. Featuring attached education certificates, it showcases my qualifications effectively, ensuring a visually appealing and user-friendly experience for potential employers.
+                  </p>
+                  <div class="w-[90%] h-1 border-b-2 border-slate-600 mt-8 rounded-xl justify-center items-center flex flex-col text-center mx-auto"></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- Right Bar -->
+    <div class="rightBar flex flex-row sm:flex-row p-0 pr-2 top-0 right-0 absolute">
+      <span class="text-2xl text-white font-bold p-3 " id="date"></span>
+      <span class="text-2xl text-white font-bold p-3 " id="weekday"></span>
+      <span class="text-2xl text-white font-bold p-3 "><span id="r.hours"></span>:<span id="r.minutes"></span>:<span id="r.seconds"></span></span>
+    </div>
+
+    <script src="./index3.js" type="module" ></script>
+
+    <script>
+        // Javascript for toogle switch of dark mode
+        document.getElementById("toggle").addEventListener("change", function () {
+          const label = this.nextElementSibling;
+          const ball = label.querySelector("span");
+          if (this.checked) {
+            label.style.backgroundColor = "#708090";
+            ball.style.transform = "translateX(1.25rem)"; // Move ball to the right
+            document.documentElement.classList.add("dark"); // Enable dark mode
+          } else {
+            label.style.backgroundColor = "#d1d5db"; // Gray background when unchecked
+            ball.style.transform = "translateX(0)"; // Move ball to the left
+            document.documentElement.classList.remove("dark"); // Disable dark mode
+          }
+        });
+  
+        // Script for mobile-menu button
+        const btn = document.querySelector(".mobile-menu-button");
+        const menu = document.querySelector(".mobile-menu");
+        const backBtn = document.querySelector(".mobile-menu-back-button");
+  
+        btn.addEventListener("click", () => {
+          if (menu.classList.contains("hidden")) {
+            menu.classList.remove("hidden", "fade-out-right");
+            menu.classList.add("fade-in-left");
+          } else {
+            menu.classList.remove("fade-in-left");
+            menu.classList.add("fade-out-right");
+            setTimeout(() => {
+              menu.classList.add("hidden");
+            }, 500); // Match the duration of the fade-out animation
+          }
+          btn.classList.toggle("open");
+        });
+  
+        backBtn.addEventListener("click", () => {
+          menu.classList.remove("fade-in-left");
+          menu.classList.add("fade-out-right");
+          setTimeout(() => {
+            menu.classList.add("hidden");
+          }, 500); // Match the duration of the fade-out animation
+        });
+      </script>
+    
+  </body>
+</html>

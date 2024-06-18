@@ -33,17 +33,22 @@ function countdown(targetDate){
     const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60 ));
     const seconds = Math.floor((difference % (1000 * 60)) / (1000));
 
-    const r_hours = Math.floor(today.getHours());
-    const r_minutes = Math.floor(today.getMinutes());
-    const r_seconds = Math.floor(today.getSeconds()) ;
-
-
     document.getElementById('years').innerText = years.toString().padStart(2, "0");
     document.getElementById('months').innerText = months.toString().padStart(2, "0");
     document.getElementById('days').innerText = days.toString().padStart(2, "0");
     document.getElementById('hours').innerText = hours.toString().padStart(2, "0");
     document.getElementById('minutes').innerText = minutes.toString().padStart(2, "0");
     document.getElementById('seconds').innerText = seconds.toString().padStart(2, "0");
+
+}
+
+function clock(){
+    const today = new Date();
+
+    const r_hours = Math.floor(today.getHours());
+    const r_minutes = Math.floor(today.getMinutes());
+    const r_seconds = Math.floor(today.getSeconds()) ;
+
     document.getElementById('r.hours').innerText = r_hours.toString().padStart(2, "0");
     document.getElementById('r.minutes').innerText = r_minutes.toString().padStart(2, "0");
     document.getElementById('r.seconds').innerText = r_seconds.toString().padStart(2, "0");
@@ -51,7 +56,8 @@ function countdown(targetDate){
 }
 
 const targetDate = new Date('May 30, 2027 23:59:59').getTime();
-const interval = setInterval(() => countdown(targetDate), 1000);
+// const interval = setInterval(() => countdown(targetDate), 1000);
+const intervalClock = setInterval(() => clock(), 1000);
 
 // Right Bar
 const now = new dateZone();

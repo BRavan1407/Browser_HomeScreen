@@ -85,7 +85,7 @@ class dateZone {
         else if (this.weekDay === 6){
             this.weekDay = 'Saturday';
         }
-        else if (this.weekDay === 7){
+        else if (this.weekDay === 0){
             this.weekDay = 'Sunday';
         }
 
@@ -124,6 +124,11 @@ class dateZone {
         return totalYears;
     }
 
+    convertToDDMMYYYY(date){
+        const [year, month, day] = date.split('-');
+        // console.log(typeof date);
+        return `${day}-${month}-${year}`;
+    }
     
 }
 
@@ -136,7 +141,7 @@ const today = new dateZone();
 // console.log(today.dd_mm_yy());
 // console.log(today.ddmmyy());
 // console.log(today.ddmmmyyyy());
-console.log(today.weekDayName());
+// console.log(today.weekDayName());
 
 // console.log('------------------------');
 

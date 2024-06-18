@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../src/style.css" />
+    <!-- Fevicon -->
+    <link rel="icon" type="image/x-icon" href="./assets/images/Fevicon.png" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>myBrowserPage</title>
+    <style>
+      .section {
+        height: 100vh;
+        display: flex;
+        /* align-items: center; */
+        /* justify-content: center; */
+        color: white;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+        position: relative;
+        overflow: auto;
+        background: linear-gradient(to bottom right, #0a1318, #232526);
+      }
+      .pattern {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        background: repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.1) 0, rgba(255, 255, 255, 0.1) 2px, rgba(0, 0, 0, 0) 2px, rgba(0, 0, 0, 0) 4px);
+      }
+
+      @media (max-width: 768px) {
+        .inputSection form {
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+  <body class="section">
+    <!-- Side Bar Menu -->
+    <div class="sideBar">
+      <button id="menuButton" class="text-white bg-transparent p-3 rounded-md focus:outline-none fixed top-0 left-0 z-30 text-2xl">
+        <i class="fas fa-bars"></i>
+      </button>
+      <!-- Menu -->
+      <div id="menu" class="hidden fixed top-0 left-0 h-full w-[50%] sm:w-1/6 bg-black text-white shadow-lg z-20 overflow-y-auto pt-12">
+        <div class="userProfile flex mx-5 my-5 justify-center border-b-2 pb-5">
+          <img src="https://picsum.photos/100/100?random=1" alt="userProfile" class="rounded-full w-[50px] h-[50px]" />
+          <a href="./index3.html" class="block px-4 py-2 mx-4 h-full items-center py-2"><span class="hover:text-yellow-500 font-bold text-3xl">PruthviRaj</span></a>
+        </div>
+        <a href="./contactInformation.html" class="text-center text-lg block px-4 py-2 hover:bg-gray-800">Contact Informations</a>
+        <a href="./education.html" class="text-center text-lg block px-4 py-2 hover:bg-gray-800">Education</a>
+        <a href="#" class="text-center text-lg block px-4 py-2 hover:bg-gray-800">Proffetional Career</a>
+        <a href="./resume.html" class="text-center text-lg block px-4 py-2 hover:bg-gray-800">Resume</a>
+        <a href="./to-do.html" class="text-center text-lg block px-4 py-2 hover:bg-gray-800">To-Do List</a>
+        <a href="#" class="text-center text-lg block px-4 py-2 hover:bg-gray-800">Calender</a>
+      </div>
+    </div>
+
+    <!-- Center Screen -->
+    <div class="to-do-section flex flex-col sm:mt-[5%] mt-[15%] w-screen sm:items-center">
+      <div class="inputSection w-full flex justify-center">
+        <form action="" class="w-full sm:flex sm:justify-center items-center flex-col sm:flex-row" onsubmit="return false">
+          <textarea type="text" placeholder="Enter task" id="task" class="textarea sm:me-2 me-0 bg-transparent text-xl border-2 rounded-lg p-1 sm:w-[80%] w-[90%] mx-auto sm:mx-0" style="word-wrap: break-word" autofocus></textarea>
+          <div class="inputButtons flex justify-center item-center">
+            <button class="border-2 p-1 m-2 ms-2 rounded-lg hover:bg-white hover:text-black" id="addTask">Add Task</button>
+            <button class="border-2 p-1 m-2 rounded-lg hover:bg-yellow-500 hover:text-black" onclick="return clearCache()">Clear All</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="outputSection p-2 sm:w-[70%] w-full flex flex-col" id="output">
+        <!-- <div class="taskList mt-10 flex justify-between">
+          <div class="flex items-start">
+            <input type="checkbox" class="me-2 mt-2 cursor-pointer" id="${id}" onchange="checkTask(${id}) ${isChecked ? 'checked' : ''}" />
+            <label for="${id}" class="text-xl"><span id="taskItem" title="${dt()}">${task}</span></label>
+          </div>
+          <span class="flex items-center"><button class="ms-2 border-2 p-2 rounded-lg hover:bg-white hover:text-black" onclick="deleteTask(${id})"><i class="fas fa-trash-alt"></i></button></span>
+        </div> -->
+
+        <!-- <div class="taskList mt-4 flex justify-between">
+          <div class="taskItem flex items-start ">
+            <input type="checkbox" class="me-2 mt-2 cursor-pointer" id="${id}" />
+            <label for="${id}" class="text-xl">This is a second static task for demo</label>
+          </div>
+          <span class="flex items-center"
+            ><button class="ms-2 border-2 p-2 rounded-lg hover:bg-white hover:text-black"><i class="fas fa-trash-alt"></i></button
+          ></span>
+        </div>
+
+        <div class="taskList mt-4 flex justify-between">
+          <div class="taskItem flex items-start ">
+            <input type="checkbox" class="me-2 mt-2 cursor-pointer" id="${id}"/>
+            <label for="${id}" class="text-xl">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum dignissimos laborum illum, neque provident impedit nam minima fugiat repudiandae sit laboriosam tempora veniam accusamus quam doloremque magni ea quae tempore.</label>
+          </div>
+          <span class="flex items-center"
+            ><button class="ms-2 border-2 p-2 rounded-lg hover:bg-white hover:text-black"><i class="fas fa-trash-alt"></i></button
+          ></span>
+        </div> -->
+      </div>
+    </div>
+
+    <!-- Right Bar -->
+    <div class="rightBar flex flex-row sm:flex-row p-4 top-0 right-0 absolute">
+      <span class="text-2xl text-white font-bold p-3" id="date"></span>
+      <span class="text-2xl text-white font-bold p-3" id="weekday"></span>
+      <span class="text-2xl text-white font-bold p-3"><span id="r.hours"></span>:<span id="r.minutes"></span>:<span id="r.seconds"></span></span>
+    </div>
+
+    <div class="pattern"></div>
+
+    <script src="./index3.js" type="module"></script>
+    <script src="./to-do-js.js" type="module"></script>
+  </body>
+</html>

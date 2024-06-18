@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Code Editor</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/codemirror.min.css">
+    <style>
+        .CodeMirror {
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Online Code Editor</h1>
+    <textarea id="code" name="code">
+function helloWorld() {
+    console.log("Hello, World!");
+}
+helloWorld();
+    </textarea>
+    <button id="run">Run</button>
+    <pre id="output"></pre>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/mode/javascript/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/addon/edit/matchbrackets.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/addon/edit/closebrackets.min.js"></script>
+    <script>
+        const editor = CodeMirror.fromTextArea(document.getElementById('code'), {
+            lineNumbers: true,
+            mode: "javascript",
+            matchBrackets: true,
+            autoCloseBrackets: true
+        });
+
+        document.getElementById('run').addEventListener('click', () => {
+            const code = editor.getValue();
+            const outputElement = document.getElementById('output');
+            try {
+                const result = eval(code);
+                outputElement.textContent = result !== undefined ? result : 'Code executed successfully';
+            } catch (e) {
+                outputElement.textContent = 'Error: ' + e.message;
+            }
+        });
+    </script>
+</body>
+</html>

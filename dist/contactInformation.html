@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../src/style.css" />
+     <!-- Fevicon -->
+     <link rel="icon" type="image/x-icon" href="./assets/images/Fevicon.png">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Contact Informations</title>
+    <style>
+      body {
+        background-image: url("./assets/images/ContactInformation.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+
+      @media (max-width: 768px) {
+        body {
+          background-size: cover;
+          background-image: url("./assets/images/mobile_ContactInformations.jpg");
+          background-position: center;
+          background-repeat: no-repeat;
+        }
+      }
+    </style>
+  </head>
+  <body class="h-screen">
+    <!-- Side Bar Menu -->
+    <div class="sideBar">
+      <button id="menuButton" class="text-white bg-transparent p-3 rounded-md focus:outline-none fixed top-0 left-0 z-30 text-2xl">
+        <i class="fas fa-bars"></i>
+      </button>
+      <!-- Menu -->
+      <div id="menu" class="hidden fixed top-0 left-0 h-full w-[50%] sm:w-1/6 bg-black text-white shadow-lg z-20 overflow-y-auto pt-12">
+        <div class="userProfile flex mx-5 my-5 justify-center border-b-2 pb-5">
+          <img src="https://picsum.photos/100/100?random=1" alt="userProfile" class="rounded-full w-[50px] h-[50px]" />
+          <a href="./index3.html" class="block px-4 py-2 mx-4 h-full items-center py-2"><span class="hover:text-yellow-500 font-bold text-3xl">PruthviRaj</span></a>
+        </div>
+        <a href="./contactInformation.html" class="text-center text-lg block px-4 py-2 hover:bg-gray-800">Contact Informations</a>
+        <a href="./education.html" class="text-center text-lg block px-4 py-2 hover:bg-gray-800">Education</a>
+        <a href="#" class="text-center text-lg block px-4 py-2 hover:bg-gray-800">Proffetional Career</a>
+        <a href="#" class="text-center text-lg block px-4 py-2 hover:bg-gray-800">Resume</a>
+        <a href="#" class="text-center text-lg block px-4 py-2 hover:bg-gray-800">To-Do List</a>
+        <a href="#" class="text-center text-lg block px-4 py-2 hover:bg-gray-800">Calender</a>
+      </div>
+    </div>
+
+    <!-- Center Screen -->
+    <div class="contactScreen flex flex-col items-center sm:mt-[10%] h-screen">
+      <div class="infrations sm:mr-[30%] mt-[35%] sm:mt-0 sm:w-[40%] w-[90%] sm:h-[40%] h-[40%] border border-white">
+        <h1 class="text-5xl text-white font-bold text-center m-5 border-b-2 p-3">PruthviRaj Vijaybhai Upadhyay</h1>
+        <div class="flex flex-col text-white text-3xl h-fit justify-center">
+          <a href="#" class="p-5"><i class="p-3 fa-solid fa-envelope"></i>upadhyaypruthviraj131@gmail.com</a>
+          <a href="#" class="p-5"><i class="p-3 fa-solid fa-phone"></i>+91 9904959695</a>
+          <a href="#" class="p-5"><i class="p-3 fa-solid fa-location-dot"></i>"Bhavani Krupa", Premji Dr. Street, Nr.Gheti Darwaja, Palitana - 364270.</a>
+        </div>
+      </div>
+      <div class="location w-[90%] flex items-center h-[90%] sm:mt-8">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d421.6301302501602!2d71.82080030027227!3d21.52461842550252!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be2068c52590a89%3A0x1b08e98aeab5216d!2sBaharpara%2C%20Jivapur%2C%20Palitana%2C%20Gujarat%20364270!5e0!3m2!1sen!2sin!4v1718000234542!5m2!1sen!2sin"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          class="m-6 w-full h-[90%] rounded-2xl"></iframe>
+      </div>
+    </div>
+
+    <!-- Right Bar -->
+    <div class="rightBar flex flex-col sm:flex-row p-4 top-0 right-0 absolute">
+      <span class="text-2xl text-white font-bold p-3" id="date"></span>
+      <span class="text-2xl text-white font-bold p-3" id="weekday"></span>
+      <span class="text-2xl text-white font-bold p-3"><span id="r.hours"></span>:<span id="r.minutes"></span>:<span id="r.seconds"></span></span>
+    </div>
+
+    <script src="./index3.js" type="module"></script>
+  </body>
+</html>

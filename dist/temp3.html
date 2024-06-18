@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../src/output.css" />
+    <title>Genesys-Agent assistance</title>
+    <style>
+      .top-bar .active {
+        background-color: #f1f5f9;
+        color: #fb7185;
+        font-weight: bold;
+        border-top: 3px solid #fb7185;
+        /* border-bottom-color: #FB7185;  */
+        /* background-color: #33383d; */
+      }
+
+      .extraBar .active {
+        border-bottom: 3px solid #fb7185;
+      }
+
+      .hidden {
+        display: none;
+      }
+
+      .striped tbody tr:nth-child(odd) {
+        background-color: #e5e7eb;
+      }
+
+      .striped tbody tr:hover {
+        background-color: #d1d5db;
+      }
+
+      /* Dropdown */
+      .dropdown-toggle {
+        cursor: pointer;
+        display: flex;
+        align-items: center; /* Aligns items vertically center */
+        padding: 0 20px; /* Applies 20px padding */
+        background-color: transparent; /* Transparent background */
+      }
+      .dropdown-content {
+        display: none;
+        position: absolute; /* Ensures the dropdown content stays below the button */
+        background-color: white; /* Background color for the dropdown content */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a slight shadow for better visibility */
+        margin-top: 8px; /* Adds a bit of space between the button and the dropdown content */
+        padding:10px; /* Adds padding inside the dropdown content */
+        border-radius: 8px; /* Adds rounded corners */
+        z-index: 1000; /* Ensures the dropdown is above other elements */
+        width: auto;
+        white-space: nowrap;
+      }
+      .dropdown-content.show {
+        display: block;
+      }
+      .checkbox-item {
+        display: block;
+        margin-bottom: 0.5 rem;
+        white-space: nowrap;
+        margin: 2px;
+      }
+
+      /* Sticky Dropdown Button */
+      .dropdown-button-container {
+        position: fixed;
+        top: 50%;
+        right: 10%;
+        z-index: 1000;
+        padding: 20px;
+        background-color: transparent;
+        margin-right: 20PX;
+      }
+    </style>
+  </head>
+  <body class="bg-slate-100">
+    <!-- Tabs -->
+    <div class="top-bar flex justify-around text-white text-sm m-1">
+      <a href="#" class="p-3 bg-customGray text-rose-400 w-full text-center active" data-target="aiAssist">AI Assist</a>
+      <a href="#" class="p-3 bg-customGray text-rose-400 w-full text-center" data-target="kb">KB</a>
+      <a href="#" class="p-3 bg-customGray text-rose-400 w-full text-center" data-target="sessions">Sessions</a>
+      <a href="#" class="p-3 bg-customGray text-rose-400 w-full text-center" data-target="tranScript">Transcript</a>
+    </div>
+
+    <!-- Input Row -->
+    <div class="flex mt-3" id="input">
+      <span class="m-1 w-6"><img src="./Images/text.png" alt="" /></span>
+      <input type="text" placeholder="Next Action" class="rounded-lg w-[90%] p-1 shadow-sm focus:border-rose-400 focus:outline-none focus:ring-0 border-2" />
+    </div>
+
+    <!-- Extra Bar -->
+    <div class="extraBar flex justify-around m-1" id="extra-bar">
+      <a href="#" class="p-2 text-rose-400 w-full text-center active">General</a>
+      <a href="#" class="p-2 text-rose-400 w-full text-center">Airlines</a>
+    </div>
+
+    <!-- DropDown -->
+    <div class="flex place-content-center">
+      <div class="dropdown-button-container ">
+        <span class="dropdown-toggle" onclick="toggleDropdown()">
+          <i id="dropdown-icon" class="fa-solid fa-angle-left"></i>
+        </span>
+        <div id="dropdown-content" class="dropdown-content">
+          <label class="checkbox-item"><input type="checkbox" />&nbsp;Greeting & Verification</label>
+          <label class="checkbox-item"><input type="checkbox" />&nbsp;Itinerary Confirmation</label>
+          <label class="checkbox-item"><input type="checkbox" />&nbsp;Policy Explanation</label>
+          <label class="checkbox-item"><input type="checkbox" />&nbsp;Booking Details Check</label>
+          <label class="checkbox-item"><input type="checkbox" />&nbsp;Special Requests Handling</label>
+          <label class="checkbox-item"><input type="checkbox" />&nbsp;Customer Satisfaction Check</label>
+        </div>
+      </div>
+    </div>
+
+    <!-- AI Assistance -->
+    <div class="flex justify-between content-div" id="aiAssist">
+      <div class="m-3 flex text-center">
+        <img src="./Images/font.png" class="w-4 h-4 m-1 font-light" alt="" />
+        <p class="hover:font-semibold ml-2 font-thin text-sm">Hello how can i help you today</p>
+      </div>
+    </div>
+
+    <!-- KB -->
+    <div class="kb mt-10 content-div flex flex-col items-center" id="kb">
+      <h1>this is 'KB'</h1>
+    </div>
+
+    <!-- Sessions -->
+    <div id="sessions" class="content-div container mt-10 mx-auto">
+      <table class="table-auto w-full border-collapse striped text-center">
+        <thead>
+          <tr class="text-lg">
+            <th class="bg-customGray text-rose-400 px-4 py-2">Name1</th>
+            <th class="bg-customGray text-rose-400 px-4 py-2">Description</th>
+            <th class="bg-customGray text-rose-400 px-4 py-2">Date</th>
+          </tr>
+        </thead>
+        <tbody class="font-light text-sm">
+          <tr class="hover:bg-gray-300 cursor-pointer hover:font-semibold">
+            <td class="px-4 py-2">Anushka S</td>
+            <td class="px-4 py-2">Customer request for fare type upgrade not permitted after booking. Directions provided to add Gaurantee</td>
+            <td class="px-4 py-2">April 23, 2023</td>
+          </tr>
+          <tr class="hover:bg-gray-300 cursor-pointer hover:font-semibold">
+            <td class="px-4 py-2">Zeba K</td>
+            <td class="px-4 py-2">PNR and Login Credentials Shared with customer as requested along with mandatory reminders list</td>
+            <td class="px-4 py-2">June 11, 2023</td>
+          </tr>
+          <tr class="hover:bg-gray-300 cursor-pointer hover:font-semibold">
+            <td class="px-4 py-2">Manuel O</td>
+            <td class="px-4 py-2">Customer advised to add baggage at the airport to avoid additional fees</td>
+            <td class="px-4 py-2">June 12, 2023</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Transcript -->
+    <div class="container mx-auto mt-10">
+      <div class="w-full">
+        <div class="text-right mt-3 mb-3">
+          <span class="bg-rose-400 text-white ml-auto p-2 rounded-2xl" style="border-bottom-right-radius: 0" title="02:18pm">Good morning! Welcome to Travel Assist customer support. How may I assist you today? </span>
+        </div>
+        <div class="text-left mt-3 mb-3">
+          <span class="bg-gray-200 p-2 rounded-2xl mr-auto" style="border-bottom-left-radius: 0" title="02:18pm">Hi there! I need some help with my upcoming trip. I have a few questions about my flight. </span>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function toggleDropdown() {
+        var content = document.getElementById("dropdown-content");
+        var icon = document.getElementById("dropdown-icon");
+        content.classList.toggle("show");
+        icon.classList.toggle("fa-angle-left");
+        icon.classList.toggle("fa-angle-down");
+      }
+    </script>
+    <script src="./nextiva.js"></script>
+  </body>
+</html>

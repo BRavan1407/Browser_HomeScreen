@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../src/style.css" />
+    <!-- Fevicon -->
+    <link rel="icon" type="image/x-icon" href="./assets/images/Fevicon.png" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>myBrowserPage</title>
+    <style>
+      body {
+        background-image: url("./assets/images/Calender.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+
+      .today {
+        background-color: white;
+        /* border-radius: 50%; */
+        color: black;
+        
+      }
+
+      .date{
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* padding: 20px; */
+        margin: auto;
+        font-weight: 600;
+      }
+
+      .dates{
+        text-align: center;
+      }
+
+      .isEvent {
+       border: 2px solid yellow;
+       border-radius: 50%;
+      }
+
+      @media (max-width: 768px) {
+        body {
+          background-size: cover;
+          background-image: url("./assets/images/mobile_Calender.jpg");
+          background-position: center;
+          background-repeat: no-repeat;
+        }
+      }
+    </style>
+  </head>
+  <body class="h-screen w-screen">
+    <!-- Side Bar Menu -->
+    <div class="sideBar">
+      <button id="menuButton" class="text-white bg-transparent p-3 rounded-md focus:outline-none fixed top-0 left-0 z-30 text-2xl">
+        <i class="fas fa-bars"></i>
+      </button>
+      <!-- Menu -->
+      <div id="menu" class="hidden fixed top-0 left-0 h-full w-[50%] sm:w-1/6 bg-black text-white shadow-lg z-20 overflow-y-auto pt-12">
+        <div class="userProfile flex mx-5 my-5 justify-center border-b-2 pb-5">
+          <img src="https://picsum.photos/100/100?random=1" alt="userProfile" class="rounded-full w-[50px] h-[50px]" />
+          <a href="./index3.html" class="block px-4 py-2 mx-4 h-full items-center"><span class="hover:text-yellow-500 font-bold text-3xl">PruthviRaj</span></a>
+        </div>
+        <a href="./contactInformation.html" class="text-center text-lg block px-4 py-2 hover:bg-gray-800">Contact Informations</a>
+        <a href="#" class="text-center text-lg block px-4 py-2 hover:bg-gray-800">Education</a>
+        <a href="#" class="text-center text-lg block px-4 py-2 hover:bg-gray-800">Proffetional Career</a>
+        <a href="#" class="text-center text-lg block px-4 py-2 hover:bg-gray-800">Resume</a>
+        <a href="#" class="text-center text-lg block px-4 py-2 hover:bg-gray-800">To-Do List</a>
+        <a href="#" class="text-center text-lg block px-4 py-2 hover:bg-gray-800">Calender</a>
+      </div>
+    </div>
+
+    <!-- Center Screen -->
+    <div class="mainCalender border-2 rounded-md sm:w-[80%] w-[90%] h-[70%] justify-center mx-auto sm:mt-[5%] mt-[15%] flex">
+      <div class="calenderBody sm:w-[80%] w-[100%] hidden">
+        <div class="header flex justify-around border-b-2 p-3 mt-2 mb-2">
+          <button class="text-white text-2xl font-bold"><i class="fa-solid fa-chevron-left"></i></button>
+          <h5 class="text-white text-2xl font-bold">July 1999</h5>
+          <button class="text-white text-2xl font-bold"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+
+        <div class="calender grid grid-cols-7 gap-2">
+          <div class="weekDays mt-5 col-span-7">
+            <ul class="text-center text-3xl text-white font-bold grid grid-cols-7 ">
+                <li>Sun</li>
+                <li>Mon</li>
+                <li>Tue</li>
+                <li>Wed</li>
+                <li>Thu</li>
+                <li>Fri</li>
+                <li>Sat</li>
+              </ul>
+          </div>
+
+          <div class="dates col-span-7 grid grid-cols-7 gap-2 mt-4">
+            <span class="date text-center text-2xl text-gray-500">27</span>
+            <span class="date text-center text-2xl text-gray-500">28</span>
+            <span class="date text-center text-2xl text-gray-500">29</span>
+            <span class="date text-center text-2xl text-gray-500">30</span>
+
+            <span class="date text-center text-2xl text-white">1</span>
+            <span class="date text-center text-2xl text-white">2</span>
+            <span class="date text-center text-2xl text-white">3</span>
+            <span class="date text-center text-2xl text-white">4</span>
+            <span class="date text-center text-2xl text-white">5</span>
+            <span class="date text-center text-2xl text-white">6</span>
+            <span class="date text-center text-2xl text-white">7</span>
+            <span class="date text-center text-2xl text-white">8</span>
+            <span class="date text-center text-2xl text-white isEvent">9</span>
+            <span class="date text-center text-2xl text-white">10</span>
+            <span class="date text-center text-2xl text-white">11</span>
+            <span class="date text-center text-2xl text-white">12</span>
+            <span class="date text-center text-2xl text-white">13</span>
+            <span class="date text-center text-2xl text-white today">14</span>
+            <span class="date text-center text-2xl text-white">15</span>
+            <span class="date text-center text-2xl text-white">16</span>
+            <span class="date text-center text-2xl text-white">17</span>
+            <span class="date text-center text-2xl text-white">18</span>
+            <span class="date text-center text-2xl text-white">19</span>
+            <span class="date text-center text-2xl text-white">20</span>
+            <span class="date text-center text-2xl text-white">21</span>
+            <span class="date text-center text-2xl text-white">22</span>
+            <span class="date text-center text-2xl text-white">23</span>
+            <span class="date text-center text-2xl text-white">24</span>
+            <span class="date text-center text-2xl text-white">25</span>
+            <span class="date text-center text-2xl text-white">26</span>
+            <span class="date text-center text-2xl text-white">27</span>
+            <span class="date text-center text-2xl text-white">28</span>
+            <span class="date text-center text-2xl text-white">29</span>
+            <span class="date text-center text-2xl text-white">30</span>
+            <span class="date text-center text-2xl text-white">31</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Right Bar -->
+    <div class="rightBar flex flex-row sm:flex-row p-4 top-0 right-0 absolute">
+      <span class="text-2xl text-white font-bold p-3" id="date"></span>
+      <span class="text-2xl text-white font-bold p-3" id="weekday"></span>
+      <span class="text-2xl text-white font-bold p-3"><span id="r.hours"></span>:<span id="r.minutes"></span>:<span id="r.seconds"></span></span>
+    </div>
+
+    <script src="./index3.js" type="module"></script>
+  </body>
+</html>

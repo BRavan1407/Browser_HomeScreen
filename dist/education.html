@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../src/style.css" />
+     <!-- Fevicon -->
+     <link rel="icon" type="image/x-icon" href="./assets/images/Fevicon.png">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Education</title>
+    <style>
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        /* height: 100%; */
+      }
+
+      .section {
+        position: relative;
+        display: flex;
+        /* align-items: center; */
+        /* justify-content: center; */
+        color: white;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+        overflow: auto;
+        background: linear-gradient(to bottom right, #232526, #242121); /* Dark grey gradient */
+      }
+
+      .section::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(circle, rgba(255, 255, 255, 0.24) 1px, rgba(3, 1, 1, 0) 1px);
+        background-size: 20px 20px;
+        pointer-events: none;
+        z-index: 0; /* Ensure the pattern is behind the content */
+      }
+
+      .content {
+        position: relative;
+        z-index: 1; /* Ensure the content is above the pattern */
+      }
+
+      .flex-invert {
+        display: flex;
+        flex-direction: row; /* Default: stack children vertically */
+      }
+
+      @media (max-width: 768px) {
+        .section {
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+        }
+        .flex-invert {
+          flex-direction: column-reverse; /* Stack children vertically in reverse order */
+        }
+      }
+      @media (min-width: 769px) {
+        .flex-invert {
+          flex-direction: row; /* Reset to default: stack children vertically */
+        }
+      }
+    </style>
+  </head>
+  <body class="section content">
+    <!-- Side Bar Menu -->
+    <div class="sideBar">
+      <button id="menuButton" class="text-white bg-transparent p-3 rounded-md focus:outline-none fixed top-0 left-0 z-30 text-2xl">
+        <i class="fas fa-bars"></i>
+      </button>
+      <!-- Menu -->
+      <div id="menu" class="hidden fixed top-0 left-0 h-full w-[50%] sm:w-1/6 bg-black text-white shadow-lg z-20 overflow-y-auto pt-12">
+        <div class="userProfile flex mx-5 my-5 justify-center border-b-2 pb-5">
+          <img src="https://picsum.photos/100/100?random=1" alt="userProfile" class="rounded-full w-[50px] h-[50px]" />
+          <a href="./index3.html" class="block px-4 py-2 mx-4 h-full items-center py-2"><span class="hover:text-yellow-500 font-bold text-3xl">PruthviRaj</span></a>
+        </div>
+        <a href="./contactInformation.html" class="text-center text-lg block px-4 py-2 hover:bg-gray-800">Contact Informations</a>
+        <a href="./education.html" class="text-center text-lg block px-4 py-2 hover:bg-gray-800">Education</a>
+        <a href="#" class="text-center text-lg block px-4 py-2 hover:bg-gray-800">Proffetional Career</a>
+        <a href="#" class="text-center text-lg block px-4 py-2 hover:bg-gray-800">Resume</a>
+        <a href="#" class="text-center text-lg block px-4 py-2 hover:bg-gray-800">To-Do List</a>
+        <a href="#" class="text-center text-lg block px-4 py-2 hover:bg-gray-800">Calender</a>
+      </div>
+    </div>
+
+    <!-- Center Screen -->
+    <div class="educationContent w-full sm:mt-[5%] mt-[15%] flex flex-col items-center border-2">
+      <div class="schoolSec flex flex-col sm:flex-row border-b-2 w-[70%] items-center justify-center p-4">
+        <div class="info sm:w-[50%] text-center">
+          <p class="p-3 text-2xl font-semibold">Institute Name : C.M.Vidhyalay</p>
+          <p class="p-3 text-2xl font-semibold">Degree Name : S.S.C</p>
+          <p class="p-3 text-2xl font-semibold">Grade : 80%</p>
+          <p class="p-3 text-2xl font-semibold">Location : Palitana</p>
+        </div>
+        <div class="img ml-[5%] sm:w-[50%] flex items-center justify-center" style="z-index: 1">
+          <!-- <div style="max-width: 100%;"> -->
+          <img src="./assets/images/c.m.vidhyalay.jpg" alt="" class="rounded-lg w-[400px] h-[400px]" />
+          <!-- </div> -->
+        </div>
+      </div>
+
+      <div class="schoolSec flex flex-col sm:flex-row border-b-2 w-[70%] items-center justify-center p-4 flex-invert">
+        <div class="img ml-[5%] sm:w-[50%] flex items-center justify-center" style="z-index: 1">
+          <!-- <div style="max-width: 100%;"> -->
+          <img src="./assets/images/P.P.Savani.jpg" alt="" class="rounded-lg w-[400px] h-[400px]" />
+          <!-- </div> -->
+        </div>
+        <div class="info sm:w-[50%] text-center">
+          <p class="p-3 text-2xl font-semibold">Institute Name : P.P.Savani Chaitanya Vidhya Sankul</p>
+          <p class="p-3 text-2xl font-semibold">Degree Name : H.S.C</p>
+          <p class="p-3 text-2xl font-semibold">Grade : 56%</p>
+          <p class="p-3 text-2xl font-semibold">Location : Surat</p>
+        </div>
+      </div>
+
+      <div class="schoolSec flex flex-col sm:flex-row border-b-2 w-[70%] items-center justify-center p-4">
+        <div class="info sm:w-[50%] text-center">
+          <p class="p-3 text-2xl font-semibold">Institute Name : Takshashila Collage Of Engineering & Technology</p>
+          <p class="p-3 text-2xl font-semibold">Degree Name : B.E (Electrical)</p>
+          <p class="p-3 text-2xl font-semibold">Grade : 65%</p>
+          <p class="p-3 text-2xl font-semibold">Location : Rajkot</p>
+        </div>
+        <div class="img ml-[5%] sm:w-[50%] flex items-center justify-center" style="z-index: 1">
+          <!-- <div style="max-width: 100%;"> -->
+          <img src="./assets/images/TCET.jpg" alt="" class="rounded-lg w-[400px] h-[400px]" />
+          <!-- </div> -->
+        </div>
+      </div>
+
+      <div class="schoolSec flex flex-col sm:flex-row border-b-2 w-[70%] items-center justify-center p-4 flex-invert">
+        <div class="img ml-[5%] sm:w-[50%] flex items-center justify-center" style="z-index: 1">
+          <!-- <div style="max-width: 100%;"> -->
+          <img src="./assets/images/easy learn academy.jpg" alt="" class="rounded-lg w-[400px] h-[400px]" />
+          <!-- </div> -->
+        </div>
+        <div class="info sm:w-[50%] text-center">
+          <p class="p-3 text-2xl font-semibold">Institute Name : The Easy Learn Academy</p>
+          <p class="p-3 text-2xl font-semibold">Degree Name : Full Stack Web Developement in MERN</p>
+          <p class="p-3 text-2xl font-semibold">Grade : --</p>
+          <p class="p-3 text-2xl font-semibold">Location : Bhavnagar</p>
+        </div>
+      </div>
+    </div>
+    <!-- Right Bar -->
+    <div class="rightBar flex flex-row sm:flex-row p-4 top-0 right-0 absolute">
+      <span class="text-2xl text-white font-bold p-3" id="date"></span>
+      <span class="text-2xl text-white font-bold p-3" id="weekday"></span>
+      <span class="text-2xl text-white font-bold p-3"><span id="r.hours"></span>:<span id="r.minutes"></span>:<span id="r.seconds"></span></span>
+    </div>
+
+    <script src="./index3.js" type="module"></script>
+  </body>
+</html>
