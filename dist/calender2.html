@@ -22,7 +22,7 @@
         /* border-radius: 50%; */
         color: black;
       }
-         
+
       .date {
         height: 50px;
         width: 50px;
@@ -67,10 +67,10 @@
         }
 
         .event_planner {
-        /* z-index: 1; */
-        top: 0;
-        left: 23%;
-      }
+          /* z-index: 1; */
+          top: 0;
+          left: 23%;
+        }
       }
     </style>
   </head>
@@ -96,7 +96,7 @@
     </div>
 
     <!-- Center Screen -->
-    <div class="mainCalender  border-2 rounded-md sm:w-[80%] w-[90%] h-[70%] justify-center mx-auto sm:mt-[5%] mt-[15%] flex relative">
+    <div class="mainCalender border-2 rounded-md sm:w-[80%] w-[90%] h-[70%] justify-center mx-auto sm:mt-[5%] mt-[15%] flex relative">
       <div class="calenderBody sm:w-[80%] w-[100%]">
         <div class="header flex justify-around border-b-2 p-3 mt-2 mb-2 w-[100%]">
           <button class="text-white text-2xl font-bold" id="prevMonth" onclick="changeMonth('prevMonth')"><i class="fa-solid fa-chevron-left p-3 rounded-full border-2"></i></button>
@@ -154,7 +154,7 @@
             <span class="date text-center text-2xl text-white">29</span>
             <span class="date text-center text-2xl text-white">30</span>
             <span class="date text-center text-2xl text-white">31</span> -->
-            
+
             <!-- <span class="date text-center text-2xl text-white cursor-pointer">30</span> -->
           </div>
         </div>
@@ -162,18 +162,19 @@
     </div>
 
     <div class="event_planner flex items-center justify-center h-full absolute hidden">
-        <div class=" w-auto border-2 rounded-lg shadow-lg shadow-gray-400 bg-white p-[5%] flex flex-col items-center">
-            <h3 class="text-black text-3xl font-bold underline pb-10">Add Event</h3>
-            <input type="text" placeholder="Enter Event" class="text-black bg-transparent rounded-md text-xl p-3 border-2 w-[100%] mb-4" id="event" />
-            <div class="flex justify-between mb-4 w-full px-4">
-                <input type="date" class="bg-transparent rounded-md p-3 m-2 text-black text-xl border-2" placeholder="" id="event_date" />
-                <input type="time" class="bg-transparent rounded-md p-3 m-2 text-black text-xl border-2" id="event_time" />
-            </div>
-            <div class="flex my-3">
-              <button class="text-black text-xl font-bold p-3 border-2 rounded-md hover:bg-black hover:text-white mr-3" onclick="addEvent()">Add Event</button>
-            <button class="text-black text-xl font-bold p-3 border-2 rounded-md hover:bg-black hover:text-white" onclick="closeEvent()">Close</button>
-            </div>
+      <div class="w-auto border-2 rounded-lg shadow-lg shadow-gray-400 bg-white p-[5%] flex flex-col items-center">
+        <h3 class="text-black text-3xl font-bold underline pb-10">Add Event</h3>
+        <input type="text" placeholder="Enter Event" class="text-black bg-transparent rounded-md text-xl p-3 border-2 w-[100%] mb-4" id="event" />
+        <div class="flex justify-between mb-4 w-full px-4">
+          <input type="date" class="bg-transparent rounded-md p-3 m-2 text-black text-xl border-2" placeholder="" id="event_date" />
+          <input type="time" class="bg-transparent rounded-md p-3 m-2 text-black text-xl border-2" id="event_time" />
         </div>
+        <div class="flex my-3">
+          <button class="text-black text-xl font-bold p-3 border-2 rounded-md hover:bg-black hover:text-white mr-3" onclick="addEvent()">Add Event</button>
+          <button class="text-black text-xl font-bold p-3 border-2 rounded-md hover:bg-black hover:text-white mr-3" onclick="closeEvent()">Close</button>
+          <button class="text-black text-xl font-bold p-3 border-2 rounded-md hover:bg-black hover:text-white" onclick="deleteEvent(id)">Delete</button>
+        </div>
+      </div>
     </div>
     <!-- Right Bar -->
     <div class="rightBar flex flex-row sm:flex-row p-4 top-0 right-0 absolute">

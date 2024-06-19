@@ -1,0 +1,164 @@
+:: Tasks ::
+
+6th may 2024 :
+	- floatbot.ai website and product survay.
+	- dev.floatbot.ai website visit.
+	- snipet creation by testing https://floatbot.ai/developers/json-api this JSON-api.
+	- got email for my credentials.
+	- setup that on outlook, teams, company website, create account for console login, etc.
+	
+7th may 2024 :
+	- demo API calling from snipet using axios.
+	- tested that demo api and created snippets for cards, key-value, attributes, etc(all the workflow manager topics).
+	
+8th may 2024 :
+	- creating meaningfull bot for some perticular topic. (Ongoing task).
+	
+9th may 2024 :
+	- creating bot is continue.
+	- stuck in comparing dates using snipet (Problem solved).
+	- bot is still continue and it will be completed by tomorrow.
+	
+10th may 2024 :
+	- Bot creation completed with DOB selection minimum 18 years.
+	- Self Learning
+	- Under Maintenance page created. The link is given below.
+		- https://bravan1407.github.io/Floatbot-tasks/Under%20Maintenance/index.html
+	
+11th may 2024 :
+	- Creating snipet from fatching API.
+	
+13th may 2024 :
+	- All the 3 snippets completed.
+	- JavaScript Learning using W3School.
+	- One card in snipet created using HTML and CSS. (two questions, radio buttons and submit button.).
+	
+14th may 2024 :
+	- Created changes in codeSnippet card.
+	- Creating to-do list 
+	
+15th may 2024 :
+	- To-Do created.
+	- Adding functionality of prevent dublicate entry and loosing data after refreshing page.(PENDING)
+		- Tried localstorage.getItem and localstorage.setItem (not worked)
+		
+16th may 2024 :
+	- Added functionality of prevent dublicate entry and loosing data after refreshing page.(Completed)
+	- Bugs solved : loosing strike after refreshing page, page refreshing while pressing clear all button. (Completed)
+	
+17th may 2024 :
+	- to-do complete.
+	- print 1 to 100 without using any loop.(PENDING)
+	- "HALF DAY EMERGENCY LEAVE."
+	
+20th may 2024 : 
+	- Print 1 to 100 without using any loop.(Completed)
+	- Learning basics of node JS.
+		- Type of requests.
+		- Creating app of node js using express js,
+		- Creating server using express js.
+		- What is Enviroment Variables?
+		- How to declare Enviroment Variables in .env file.
+		- Basic overview of Modeling.
+	- Reading of documentation about Async/Await, Callbacks, Async JavaScript.
+	- Create a script to read from a text file, manipulate the content (e.g., convert it to uppercase), and write the manipulated content to a new file.
+	- Faching API in vs code using AXIOS.
+	
+21st may 2024 :
+	- Dogs NGO template preparing using html, CSS and Bootstrap-5. (https://bravan1407.github.io/NGO-Petting/html/index.html )
+	- Learning MongoDB.
+		- New connection, New Database creation.
+		- Adding collection to database.
+		
+22nd may 2024 :
+	- Create pages of website using html, css, bootstrap-5, using icons from font awesome.
+		- Home Page
+		- Gallery page
+		- Contact Us page
+		- About Us page
+		- Register page
+		- User Login page
+		- Forget password
+		- Student Profile page
+		- All Students page
+		
+23rd may 2024 :
+	- Learning TailwindCss.
+	
+24th may 2024 :	
+	- Simple Resume using tailwind css including dark mode. (https://bravan1407.github.io/Tailwind-CSS/dist/portfolio.html)
+	
+25th may 2024 :
+	- Resume Completed with tailwindcss, dark mode, responsive design. (https://bravan1407.github.io/Tailwind-CSS/dist/portfolio.html)
+	- Document reading of tailwindcss.
+	- Creating page of genesys AI Assistance.
+	
+27th may 2024 :
+	- Creating page of genesys AI Assistance. (Same Design Completed)
+	- Creating new design for the same page.
+	
+28th may 2024 :
+	- Changed the design of page. Not setisfied with tabbar, So changed the tab bar.
+	- Creating Nextiva page.
+
+29th may 2024 :
+	- Nextiva static page format ready, js and content setting pending
+	
+30th may 2024 : 
+	- Working on Nextiva page, two themes are created.
+	
+31st may 2024 :
+	- Nextiva page.
+	
+3rd June 2024 :
+	- Nextiva page design completed.
+	
+4th June 2024 :
+	- Adding quick reply button and more functionality.
+	
+5th June 2024 :
+	- Nextiva page done.
+	- Web Home page Creation (https://bravan1407.github.io/Browser_HomeScreen/dist/ ).
+	
+6th June 2024 :
+	- Completed static design. two bugs when opening in mobile view (needs to fix). Link is given below
+		( https://bravan1407.github.io/Browser_HomeScreen/dist/ )
+		
+7th June 2024 :
+	- One bug solved.
+	- Creating class for different time formats and times.
+	
+8th June 2024 :
+	- Class created for clock.
+	- created home page dynamic.
+	
+10th June 2024 :
+	- Contact Information page Completed.
+	- Education Page Completed.
+	- Resume page completed(One bug with dark mode).
+	- To-Do List static design completed.
+	
+11th June 2024 :
+	- To-Do page Completed.
+	
+12h june 2024 :
+	- Creating Caledar Staic design.
+
+13th June 2024 :
+	- Static Design of calender and add Event popup are completed.
+	- Scripting for making that dynamic.
+	
+14th June 2024 :
+	- Dynamic Calendar Completed.
+	- Adding events.
+	
+17th June 2024 :
+	- Tried adding event.
+
+18th June 2024 :
+	- Nothing new, Explore bot and work on same project.
+	
+19th June 2024 :
+	- Date for event planner is fatched.
+	- Local storage problem solved.
+	- 
