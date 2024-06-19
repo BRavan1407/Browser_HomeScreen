@@ -6,8 +6,6 @@ const currentDate = new Date();
 var allEvents = [];
 allEvents = JSON.parse(localStorage.getItem('allEvents') || "[]");
 
-
-
 // currentDate.setMonth(1);
 // currentDate.setFullYear(2012)
 
@@ -21,19 +19,7 @@ function createID (){
 
 // Saving to local Storage
 function saveEvents(){
-    // try{
-    //     localStorage.setItem('allEvents', JSON.stringify(allEvents));
-    //     console.log('saved to local storage');
-    // }
-    // catch (err){
-    //     console.log('Error while saving to local storage...',err);
-    // }
-
     try{
-        //let existingEvents =JSON.parse(localStorage.getItem('allEvents') || "[]") ;
-
-        //existingEvents.forEach(newEvent => allEvents.push(newEvent));
-
         localStorage.setItem('allEvents', JSON.stringify(allEvents));
     }
     catch(err){
@@ -41,7 +27,7 @@ function saveEvents(){
     }
 }
 
-// Retrive Task
+// Retrive Events
 function retriveEvents(){
     let eventTasks = localStorage.getItem("allEvents");
 
