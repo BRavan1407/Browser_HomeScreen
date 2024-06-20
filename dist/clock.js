@@ -129,6 +129,11 @@ class dateZone {
         // console.log(typeof date);
         return `${day}-${month}-${year}`;
     }
+
+    convertToYYYYMMDD(date){
+        const [day, month, year] = date.split('-');
+        return `${year}-${month}-${day}`;
+    }
     
 }
 

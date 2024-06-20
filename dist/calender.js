@@ -90,12 +90,17 @@ window.renderCalendar = () => {
     // Running month Dates
     for (let i = 1; i <= daysInmonth; i++) {
     let selectedDate = `${currentDate.getFullYear()}-${(currentDate.getMonth()+1).toString().padStart(2, '0')}-${i.toString().padStart(2, '0')}`;
+
+    let dt = new dateZone();
+        const isEvent =  allEvents.some(( ev => ev.eventDate === dt.convertToDDMMYYYY(selectedDate)));
+        let evClass = isEvent ? 'is-event' : '';
+
         // let selectedDate = `hello`;
         if (i == today.getDate() && currentDate.getMonth() == today.getMonth() && currentDate.getFullYear() == today.getFullYear()) {
-            span += `<span class="date text-center text-2xl text-white today cursor-pointer" onclick = 'openEvent("${selectedDate}")'>${i}</span>`;
+            span += `<span class="date text-center text-2xl text-white today cursor-pointer ${evClass}"  onclick = 'openEvent("${selectedDate}")'>${i}</span>`;
         }
         else {
-            span += `<span class="date text-center text-2xl text-white cursor-pointer" onclick = 'openEvent("${selectedDate}")'>${i}</span>`;
+            span += `<span class="date text-center text-2xl text-white cursor-pointer ${evClass}" onclick = 'openEvent("${selectedDate}")'>${i}</span>`;
         }
     }
 
@@ -126,6 +131,8 @@ window.openEvent = (clickedDate) => {
     if(clickedDate){
         document.getElementById('event_date').value = clickedDate;
     }
+
+    
 }
 
 // For Closing eventPlanner Popup
